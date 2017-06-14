@@ -133,6 +133,7 @@ loadDB();
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
 
+app.get('*', (request, response) => { response.sendFile('index.html', { root: './public'})});
 
 //////// ** DATABASE LOADERS ** ////////
 ////////////////////////////////////////
